@@ -1,8 +1,10 @@
 Changelog
 =========
 
-1.7 (unreleased)
+1.7dev (unreleased)
 ----------------
+
+- Do not make "./" relative links absolute feature. [rnd0101]
 
 - When resolving images, only look upward for the full image if the
   image that was traversed is not a content item (i.e. is a scale).
