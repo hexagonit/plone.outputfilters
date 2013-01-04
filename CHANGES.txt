@@ -1,16 +1,26 @@
 Changelog
 =========
 
-1.7dev (unreleased)
+1.9 (unreleased)
 ----------------
 
 - Do not make "./" relative links absolute feature. [rnd0101]
+
+1.8 (2012-12-10)
+----------------
+
+- Fix packaging issue.
+  [esteele]
+
+
+1.7 (2012-12-09)
+----------------
 
 - When resolving images, only look upward for the full image if the
   image that was traversed is not a content item (i.e. is a scale).
   [davisagli, datakurre]
 
-- Also convert "resolveUid/" links (big 'U') that FCKeditor used to create. 
+- Also convert "resolveUid/" links (big 'U') that FCKeditor used to create.
   [hacklschorsch]
 
 - Also escape double quotes, fixes #13219
