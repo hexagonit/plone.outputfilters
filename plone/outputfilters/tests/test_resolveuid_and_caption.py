@@ -254,7 +254,7 @@ alert(1);
 
     def test_image_captioning_absolutizes_uncaptioned_image(self):
         text_in = """<img src="/image.jpg" />"""
-        text_out = """<img src="http://nohost/plone/image.jpg" alt="Image" title="Image" />"""
+        text_out = """<img src="http://nohost/plone/image.jpg" alt="My caption" title="Image" />"""
         self._assertTransformsTo(text_in, text_out)
 
     def test_image_captioning_absolute_path(self):
@@ -408,6 +408,9 @@ alert(1);
         text = """<a href="resolveUid/%s">foo</a>""" % self.UID
         res = self.parser(text)
         self.assertTrue('href="http://nohost/plone/image.jpg"' in str(res))
+
+    def test_singleton_elements(self):
+        self._assertTransformsTo('<hr/>\r\n<p>foo</p><br/>', '<hr />\r\n<p>foo</p><br />')
 
 def test_suite():
     return unittest.defaultTestLoader.loadTestsFromName(__name__)
